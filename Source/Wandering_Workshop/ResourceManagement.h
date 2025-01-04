@@ -23,5 +23,7 @@ class WANDERING_WORKSHOP_API UResourceManagement : public UBlueprintFunctionLibr
 	static bool IsAmmo(EResource Resource);
 	UFUNCTION(BlueprintCallable)
 	static EResource RecipeCheck(EResource Resource1,EResource Resource2);
+	UFUNCTION(BlueprintCallable)
+	static FRecipeInput ReverseRecipe(EResource Resource);
 	
 };

@@ -39,3 +39,15 @@ EResource UResourceManagement::RecipeCheck(EResource Resource1, EResource Resour
 	if (result != nullptr) {return *result;}
 	return EResource::Empty;
 }
+
+FRecipeInput UResourceManagement::ReverseRecipe(EResource Resource)
+{
+	for (const TPair<FRecipeInput, EResource>& pair : pClassReferences.LoadSynchronous()->Recipes)
+	{
+		if (pair.Value == Resource)
+		{
+			return pair.Key;
+		}
+	}
+	return FRecipeInput{};
+}
