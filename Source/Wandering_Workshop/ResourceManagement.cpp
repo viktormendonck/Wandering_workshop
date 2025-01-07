@@ -2,7 +2,6 @@
 
 #include "ResourceManagement.h"
 
-#include "Tracks/MovieSceneMaterialTrack.h"
 TSoftObjectPtr<UClassReferences> UResourceManagement::pClassReferences =TSoftObjectPtr<UClassReferences>( FSoftClassPath("/Game/Blueprints/GameInfo.GameInfo"));
 
 TSubclassOf<AActor> UResourceManagement::GetClassFromResource(EResource Resource)
